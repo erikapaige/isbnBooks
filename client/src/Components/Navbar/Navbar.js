@@ -73,8 +73,7 @@ function Navbar() {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <img src="/Dewey_white_sm.png" alt="" />
-                {/* <AccountCircle /> */}
+                <AccountCircle />
               </IconButton>
               <Menu
                 id="menu-appbar"
