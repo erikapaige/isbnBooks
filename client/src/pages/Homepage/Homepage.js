@@ -10,8 +10,9 @@ const Homepage = () => {
     <>
       <Navbar />
       <SearchForm />
+      <BookCard />
     </>
-  );
+  )
 }
 
 export default Homepage

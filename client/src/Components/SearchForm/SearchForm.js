@@ -68,13 +68,12 @@ const SearchForm = () => {
               </Button>
               </form>
             </div>
-            <div>
               {
                 books.map(book => (
-                  <div key={book.id}>
+                  <div>
                     <Card>
                       <CardHeader
-                        title={book.details.title}
+                        title={book.ISBN.details.full_title}
                         subheader={book.details.authors[0]}
                       />
                       <CardMedia>
@@ -90,18 +89,17 @@ const SearchForm = () => {
                           href={book.details.info_url}>
                           View More Info
                           >
-                    </Button>
+                        </Button>
                         <Button
                           size="small"
                           color="primary">
                           Save
-                    </Button>
+                        </Button>
                       </CardActions>
                     </Card>
                   </div>
                 ))
               }
-            </div>
     </Container>
   )
 }

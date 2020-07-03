@@ -2,7 +2,7 @@ import { createContext } from "react"
 
 const BookContext = createContext({
   search:'',
-  books:'',
+  books:[],
   handleInputBookChange: () => { },
   handleBookSubmit: () => { }
 })
