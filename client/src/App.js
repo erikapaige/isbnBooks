@@ -30,8 +30,12 @@ const App = () => {
     axios.get(`/api/books/${bookState.search}`)
       .then(({ data }) => {
         console.log(data)
-        let newData = Object.keys(data)
+        let newData = [data.docs[0]]
+        console.log(newData)
+        // let arrayData = Object.keys(newData)
+        // console.log(arrayData)
         setBookState({ ...bookState, books: newData })
+        // setBookState({ ...bookState, books: data })
       })
       .catch(err => console.error(err))
   }

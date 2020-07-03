@@ -73,15 +73,15 @@ const SearchForm = () => {
                   <div key={book.id}>
                     <Card>
                       <CardHeader
-                        title={book.docs[0].title}
-                        subheader={book.docs[0].author_name[0]}
+                        title={book.title}
+                        subheader={book.author_name}
                       />
-                      <CardMedia>
+                      {/* <CardMedia>
                         <img
                           className={classes.image}
                           src={book.docs.cover_i}
                           alt="book cover" />
-                      </CardMedia>
+                      </CardMedia> */}
                       <CardActions>
                         {/* <Button
                 size="small"
