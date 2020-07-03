@@ -36,27 +36,27 @@ const BookCard = () => {
   return (
     <div>
       {
-        books.map(apiBook => (
-          <div key={apiBook.id}>
+        books.map(book => (
+          <div key={book.id}>
           <Card>
             <CardHeader
-              title={apiBook.details.title}
-              subheader={apiBook.details.authors[0]}
+              title={book.docs.title}
+              subheader={book.docs.author_name[0]}
             />
             <CardMedia>
               <img 
               className={classes.image}
-              src={apiBook.details.thumbnail_url}
+              src={book.docs.cover_i}
               alt="book cover" />
             </CardMedia>
             <CardActions>
-              <Button
+              {/* <Button
                 size="small"
                 color="primary"
-                href={apiBook.details.info_url}>
+                href={book.details.info_url}>
                 View More Info
                 >  
-              </Button>
+              </Button> */}
               <Button
                 size="small"
                 color="primary">

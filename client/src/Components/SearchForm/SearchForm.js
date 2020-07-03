@@ -70,8 +70,34 @@ const SearchForm = () => {
             </div>
               {
                 books.map(book => (
-                  <div>
+                  <div key={book.id}>
                     <Card>
+                      <CardHeader
+                        title={book.docs[0].title}
+                        subheader={book.docs[0].author_name[0]}
+                      />
+                      <CardMedia>
+                        <img
+                          className={classes.image}
+                          src={book.docs.cover_i}
+                          alt="book cover" />
+                      </CardMedia>
+                      <CardActions>
+                        {/* <Button
+                size="small"
+                color="primary"
+                href={book.details.info_url}>
+                View More Info
+                >  
+              </Button> */}
+                        <Button
+                          size="small"
+                          color="primary">
+                          Save
+              </Button>
+                      </CardActions>
+                    </Card>
+                    {/* <Card>
                       <CardHeader
                         title={book.ISBN.details.full_title}
                         subheader={book.details.authors[0]}
@@ -96,7 +122,7 @@ const SearchForm = () => {
                           Save
                         </Button>
                       </CardActions>
-                    </Card>
+                    </Card> */}
                   </div>
                 ))
               }
