@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import CardHeader from "@material-ui/core/CardHeader"
+import { Typography } from '@material-ui/core'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,22 +42,24 @@ const BookCard = () => {
           <Card>
             <CardHeader
               title={book.title}
-              subheader={book.author_name}
+              subheader={book.isbn[0]}
             />
-            {/* <CardMedia>
+            <Typography>
+              {book.author}
+            </Typography>
+            <Typography>
+              {book.publish_date}
+            </Typography>
+            <Typography>
+              {book.publisher}
+            </Typography>
+            <CardMedia>
               <img 
               className={classes.image}
-              src={book.docs.cover_i}
+              src={book.cover_i}
               alt="book cover" />
-            </CardMedia> */}
+            </CardMedia>
             <CardActions>
-              {/* <Button
-                size="small"
-                color="primary"
-                href={book.details.info_url}>
-                View More Info
-                >  
-              </Button> */}
               <Button
                 size="small"
                 color="primary">
